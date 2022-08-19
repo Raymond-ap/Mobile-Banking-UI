@@ -1,12 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { TailwindProvider } from 'tailwindcss-react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Onboarding } from './screens';
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
     <TailwindProvider>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+     <NavigationContainer>
+      <Stack.Navigator initialRouteName='Onboarding' screenOptions={{headerShown: false}}>
+        <Stack.Screen name='Onboarding' component={Onboarding} />
+      </Stack.Navigator>
+     </NavigationContainer>
     </TailwindProvider>
   );
 }
