@@ -3,6 +3,7 @@ import { TailwindProvider } from 'tailwindcss-react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Onboarding } from './screens';
+import TabNavigator from './navigation/TabNavigator';
 
 const Stack = createNativeStackNavigator()
 
@@ -10,8 +11,9 @@ export default function App() {
   return (
     <TailwindProvider>
      <NavigationContainer>
-      <Stack.Navigator initialRouteName='Onboarding' screenOptions={{headerShown: false}}>
-        <Stack.Screen name='Onboarding' component={Onboarding} />
+      <Stack.Navigator initialRouteName='HomeScreen' screenOptions={{headerShown: false}}>
+        {/* <Stack.Screen name='Onboarding' component={Onboarding} /> */}
+        <Stack.Screen name="HomeScreen" component={TabNavigator} />
       </Stack.Navigator>
      </NavigationContainer>
     </TailwindProvider>
