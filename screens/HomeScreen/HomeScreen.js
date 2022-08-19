@@ -6,7 +6,7 @@ import {
   ScrollView,
 } from "react-native";
 import React from "react";
-import { BalanceCard } from "../../components";
+import { BalanceCard, SubscriptionHistory } from "../../components";
 
 export default function HomeScreen() {
   return (
@@ -14,6 +14,7 @@ export default function HomeScreen() {
       <Header />
       <ScrollView showsVerticalScrollIndicator={false}>
         <BalanceCard />
+        <SubscriptionHistory />
       </ScrollView>
     </SafeAreaView>
   );

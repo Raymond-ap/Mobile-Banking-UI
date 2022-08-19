@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 const BalanceCard = () => {
   return (
-    <View className="bg-white mx-4 p-3 rounded-md shadow-lg my-4">
+    <View className="bg-white mx-4 p-3 rounded-md shadow-lg my-3">
       <View className="flex flex-row items-center justify-between mb-1">
         <Text className="text-gray-600 capitalize text-base">your balance</Text>
         <View className="bg-green-300 px-2 py-0.5 rounded-full">
