@@ -63,3 +63,31 @@ export const INCOMING_TRANSACTIONS = [
     amount: "$256",
   },
 ];
+
+export const FRIENDS = [
+    {
+        name: "Ramy",
+        handle: "@rammy201",
+        img: require("../assets/images/img1.jpg"),
+        email: "ramy@gmail.com"
+    },
+    {
+        name: "Sara",
+        handle: "@sarado",
+        img: require("../assets/images/img2.jpg"),
+        email: "sara@gmail.com"
+    },
+    {
+        name: "Ibrahim",
+        handle: "@ibrahima",
+        img: require("../assets/images/img3.jpg"),
+        email: "ibrahim@gmail.com"
+    },
+    {
+        name: "Dr. Frank",
+        handle: "@frankhere",
+        img: require("../assets/images/img4.png"),
+        email: "frank@gmail.com"
+    },
+
+]
