@@ -4,16 +4,16 @@ import { Ionicons } from "@expo/vector-icons";
 
 const BalanceCard = () => {
   return (
-    <View className="bg-white mx-4 p-3 rounded-md shadow-lg my-3">
+    <View className="bg-slate-800 mx-4 p-3 rounded-md shadow-lg my-3">
       <View className="flex flex-row items-center justify-between mb-1">
-        <Text className="text-gray-600 capitalize text-base">your balance</Text>
+        <Text className="text-gray-300 capitalize text-base">your balance</Text>
         <View className="bg-green-300 px-2 py-0.5 rounded-full">
           <Text className="tracking-widest text-xs font-bold text-green-700">
             + 6,21%
           </Text>
         </View>
       </View>
-      <Text className="tracking-widest text-xl font-bold">$1,000,000.00</Text>
+      <Text className="tracking-widest text-white text-xl font-bold">$1,000,000.00</Text>
       <View className="mt-3 flex flex-row justify-center">
         <ActionButton
           icon={"add"}
