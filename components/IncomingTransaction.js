@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import { Ionicons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
+import { INCOMING_TRANSACTIONS } from "../constants";
 
 const IncomingTransaction = () => {
   return (
@@ -9,7 +10,9 @@ const IncomingTransaction = () => {
         recent transactions
       </Text>
       <View className="mt-2 mx-4">
-        <Card />
+        {INCOMING_TRANSACTIONS.map((item, index) => {
+          return <Card key={index} item={item} />;
+        })}
       </View>
     </View>
   );
@@ -19,21 +22,33 @@ const Card = ({ item }) => {
   return (
     <TouchableOpacity
       activeOpacity={0.8}
-      className="flex flex-row items-center justify-between my-1.5 py-2"
+      className="flex flex-row items-center justify-between my-1.5 py-2 bg-slate-800 px-2 rounded-lg"
     >
-      <View className="w-9 h-9 items-center justify-center rounded-full bg-green-300">
-        <Ionicons name="add-sharp" size={25} color="#1e40af" />
+      <View
+        className={`w-8 h-8 items-center justify-center rounded-full ${
+          item.type === "exp" ? "bg-teal-200" : "bg-cyan-200"
+        }`}
+      >
+        <Feather
+          name={item.type === "inc" ? "plus" : "minus"}
+          size={20}
+          color={item.type === "exp" ? "#115e59" : "#155e75"}
+        />
       </View>
       <View style={{ flex: 1 }} className="mx-2">
         <Text className="text-gray-300 text-base font-bold capitalize">
-          From: Ibrahim
+          {`${item.type === "inc" ? `From ${item.label}` : `To ${item.label}`}`}
         </Text>
         <Text className="text-gray-400 text-sm font-semibold capitalize">
-          From: Ibrahim
+          {item.date}
         </Text>
       </View>
-      <Text className="text-green-400 text-base font-semibold capitalize">
-        From: Ibrahim
+      <Text
+        className={`text-base font-semibold capitalize ${
+          item.type === "inc" ? "text-green-400" : "text-red-600"
+        }`}
+      >
+        {`${item.type === "inc" ? `+ ${item.amount}` : `- ${item.amount}`}`}
       </Text>
     </TouchableOpacity>
   );

@@ -30,3 +30,36 @@ export const SUBSCRIPTIONS = [
     amount: "$100,000",
   },
 ];
+
+export const INCOMING_TRANSACTIONS = [
+  {
+    type: "inc",
+    label: "Ibrahim",
+    date: "Nov 1, 2019",
+    amount: "$30",
+  },
+  {
+    type: "exp",
+    label: "isaic",
+    date: "oct 21st, 2022",
+    amount: "$256",
+  },
+  {
+    type: "exp",
+    label: "spotify",
+    date: "Nov 1, 2019",
+    amount: "$50.78",
+  },
+  {
+    type: "inc",
+    label: "cairo bank",
+    date: "jun 21st, 2022",
+    amount: "$1000",
+  },
+  {
+    type: "exp",
+    label: "webflow",
+    date: "oct 21st, 2022",
+    amount: "$256",
+  },
+];
