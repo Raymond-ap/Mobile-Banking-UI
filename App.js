@@ -20,7 +20,11 @@ export default function App() {
           <Stack.Screen name="HomeScreen" component={TabNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style="dark" translucent={false} backgroundColor={"#f1f5f9"} />
+      <StatusBar
+        style="light"
+        translucent={false}
+        backgroundColor={"#0f172a"}
+      />
     </TailwindProvider>
   );
 }
