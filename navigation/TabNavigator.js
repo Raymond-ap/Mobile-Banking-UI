@@ -29,10 +29,10 @@ const TabNavigator = () => {
           );
         },
         tabBarHideOnKeyboard: true,
-        tabBarActiveTintColor: "#000",
-        tabBarInactiveTintColor: "#6B6F6E",
+        tabBarActiveTintColor: "#fff",
+        tabBarInactiveTintColor: "#94a3b8",
         tabBarStyle: {
-          backgroundColor: "#fff",
+          backgroundColor: "#1e293b",
           borderTopColor: "transparent",
           height: 65,
           paddingTop: 10,
@@ -40,7 +40,6 @@ const TabNavigator = () => {
           paddingLeft: 10,
           paddingRight: 10,
           borderTopWidth: 1,
-          borderTopColor: "#e9ecef",
         },
         headerShown: false,
         tabBarLabelStyle: {
