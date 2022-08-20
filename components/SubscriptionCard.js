@@ -6,7 +6,6 @@ const truncate = (str, n) => {
 };
 
 const SubscriptionCard = ({ item }) => {
-  console.log("item", item);
   return (
     <TouchableOpacity
       activeOpacity={1}
