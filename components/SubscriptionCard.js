@@ -1,13 +1,16 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const truncate = (str, n) => {
   return str.length > n ? str.substr(0, n - 1) + "" : str;
 };
 
 const SubscriptionCard = ({ item }) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
+      onPress={() => navigation.navigate("TransactionDetail", { item: item })}
       activeOpacity={1}
       className="bg-slate-800 w-56 p-3 items-center shadow-lg rounded-md mx-1"
     >

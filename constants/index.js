@@ -37,30 +37,35 @@ export const INCOMING_TRANSACTIONS = [
     label: "Ibrahim",
     date: "Nov 1, 2019",
     amount: "$30",
+    endDate: "Nov 30, 2019",
   },
   {
     type: "exp",
     label: "isaic",
     date: "oct 21st, 2022",
     amount: "$256",
+    endDate: "Nov 30, 2019",
   },
   {
     type: "exp",
     label: "spotify",
     date: "Nov 1, 2019",
     amount: "$50.78",
+    endDate: "Nov 30, 2019",
   },
   {
     type: "inc",
     label: "cairo bank",
     date: "jun 21st, 2022",
     amount: "$1000",
+    endDate: "Nov 30, 2019",
   },
   {
     type: "exp",
     label: "webflow",
     date: "oct 21st, 2022",
     amount: "$256",
+    endDate: "Nov 30, 2019",
   },
 ];
 

@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import { INCOMING_TRANSACTIONS } from "../constants";
+import { useNavigation } from "@react-navigation/native";
 
 const IncomingTransaction = () => {
   return (
@@ -19,6 +20,7 @@ const IncomingTransaction = () => {
 };
 
 const Card = ({ item }) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
       activeOpacity={0.8}

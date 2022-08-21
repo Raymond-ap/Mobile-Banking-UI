@@ -156,6 +156,7 @@ const ActionCard = ({ title, subTitle, icon, color, onPress, rightIcon }) => {
 };
 
 const ControlCard = ({ title, subTitle, icon, color, isOn }) => {
+  const [toggle, setToggle] = React.useState(isOn);
   return (
     <TouchableOpacity
       activeOpacity={1}
@@ -176,11 +177,11 @@ const ControlCard = ({ title, subTitle, icon, color, isOn }) => {
       </View>
       <View className="">
         <ToggleSwitch
-          isOn={isOn}
+          isOn={toggle}
           offColor="#dbeafe"
           onColor="#1d4ed8"
           size="small"
-          onToggle={(isOn) => console.log("changed to : ", isOn)}
+          onToggle={(isOn) => setToggle(!toggle)}
         />
       </View>
     </TouchableOpacity>
@@ -217,7 +218,7 @@ const BusinessCard = () => {
 
 const CreateCard = () => {
   const cardColors = ["blue", "red", "white", "green", "orange", "black"];
-  const [selectedColor, setSelectedColor] = React.useState(cardColors[4]);
+  const [selectedColor, setSelectedColor] = React.useState(cardColors[1]);
   return (
     <View className="my-2">
       <Image
